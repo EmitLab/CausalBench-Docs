@@ -46,6 +46,9 @@
                             <li class="nav-item">
                                 <a href="./" class="nav-link active" aria-current="page">Learn the Basics</a>
                             </li>
+                            <li class="nav-item">
+                                <a href="../terms/" class="nav-link">Terms and Conditions</a>
+                            </li>
                         </ul>
 
                     <ul class="nav navbar-nav ms-md-auto">
@@ -60,7 +63,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" class="nav-link disabled">
+                                <a rel="next" href="../terms/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -143,23 +146,118 @@
 
 <h1 id="causalbench-101">CausalBench 101</h1>
 <h2 id="dataset">Dataset</h2>
-<p>...</p>
+<ul>
+<li><strong>Description</strong>: Data and configuration files that describe the data in the data files.</li>
+</ul>
 <h3 id="how-to-define-a-dataset">How to define a dataset</h3>
-<p>...</p>
+<p>A dataset is defined with a yaml configuration, and the data files.
+Any dataset configuration must inlcude a type, name, task(?), files defined. Files need to be configured with <code>type</code>, <code>data</code> type, file path in <code>path</code>, and any columns with their details.<br />
+Optional fields are: <code>headers</code>.</p>
+<pre><code class="language-yaml">type: dataset
+name: abalone
+
+files:
+    file1:
+        type: csv
+        data: dataframe
+        path: abalone.mixed.numeric.csv
+        headers: true
+        columns:
+            sex:
+                header: Sex
+                type: nominal
+                data: integer
+                labels:
+                    - 0
+                    - 1
+                    - 2
+            ...
+    file2:
+        type: csv
+        data: graph
+        path: causal_info_adjmat.csv
+        headers: true
+        columns:
+            sex:
+                header: Sex
+                type: nominal
+                data: integer
+            ...
+</code></pre>
 <h2 id="model">Model</h2>
-<p>...</p>
+<ul>
+<li><strong>Description</strong>: Algorithms written in Python that take in a dataset and execute a particular model.</li>
+<li><strong>Function</strong>: Produce outputs based on the tasks and models.</li>
+</ul>
 <h3 id="how-to-define-a-model">How to define a model</h3>
-<p>...</p>
+<p>A model is defined with a yaml configuration, alongside a python script that the model is executed on. A model must have a type, name, task(?), path, and its inputs and outputs defined.
+Optional fields are: <code>version_num</code>, that defines the versions, <code>arguments</code> that define any arguments and hyperparameters a model can take.</p>
+<pre><code class="language-yaml">type: model
+name: tcdf
+task: discovery
+path: tcdf.py
+version_num: 1
+arguments:
+    kernel_size:
+        type: int
+        default_value: 4
+        description: Size of sliding kernel
+
+inputs:
+    data:
+        id: data
+        data: dataframe
+    space:
+        id: space
+        data: graph
+outputs:
+    prediction:
+        id: pred
+        data: graph
+</code></pre>
 <h2 id="metric">Metric</h2>
-<p>...</p>
+<ul>
+<li><strong>Description</strong>: Python implementations of metric calculations.</li>
+<li><strong>Function</strong>: Take in the outputs provided by the model and output a numerical value, based on its configuration.</li>
+</ul>
 <h3 id="how-to-define-a-metric">How to define a metric</h3>
 <p>...</p>
 <h2 id="context">Context</h2>
-<p>...</p>
+<ul>
+<li><strong>Description</strong>: A configuration that encapsulates a selected set of multiple datasets, models, metrics and hyperparameters.</li>
+<li><strong>Function</strong>: ...</li>
+</ul>
 <h3 id="how-to-define-a-context">How to define a context</h3>
-<p>...</p>
+<p>A context is created with a yaml notation. Any context should have a type, name, task(?), and at least one dataset, model and metric defined.  </p>
+<pre><code class="language-yaml">type: context
+name: TCDF Discovery
+task: discovery.static
+dataset:
+    id: 0
+    version_num: 1
+model:
+    id: 1
+    version_num: 1
+    parameters:
+        data: file1
+metrics:
+    -   id: 0
+        version_num: 1
+        parameters:
+            ground_truth: file2
+    -   id: 1
+        version_num: 1
+        parameters:
+            ground_truth: file2
+model_hyperparameters:
+    kernel_size: 8
+    learning_rate: 0.05
+</code></pre>
 <h2 id="benchmark">Benchmark</h2>
-<p>...</p></div>
+<ul>
+<li><strong>Description</strong>: Benchmark defines run results of a number of executed contexts. 
+...</li>
+</ul></div>
             </div>
         </div>
 
