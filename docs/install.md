@@ -6,19 +6,20 @@ Install the latest version of CausalBench package on pip:
 CausalBench package requires several packages and registration to the CausalBench in order to run.
 ### Package Prerequisites:
 CausalBench requires several packages in order to execute, these packages are downloaded alongisde CausalBench:
-- "gputil",
-- "requests",
-- "pyyaml",
-- "bunch_py3",
-- "pandas",
-- "jsonschema",
-- "pipreqs",
-- "psutil",
-- "py-cpuinfo",
-- "pip-system-certs",
-- "pyadl",
-- "gcastle",
-- "torch~=2.3.0"
+
+- `gputil`
+- `requests`
+- `pyyaml`
+- `bunch_py3`
+- `pandas`
+- `jsonschema`
+- `pipreqs`
+- `psutil`
+- `py-cpuinfo`
+- `pip-system-certs`
+- `pyadl`
+- `gcastle`
+- `torch~=2.3.0`
 
 ### Configuration
 
