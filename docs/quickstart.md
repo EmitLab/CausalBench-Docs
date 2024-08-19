@@ -2,7 +2,7 @@
 You can use the [python notebook](../files/CausalBench-Quickstart.ipynb) attached, or follow along this page to get CausalBench into action.
 
 ## Install CausalBench,
-Please follow the [installation guide](./install/) for installing CausalBench.
+Please follow the [installation guide](../install/) for installing CausalBench.
 
 Install the latest version of CausalBench package on pip:
 `pip install causalbench-asu`

@@ -3,7 +3,7 @@ Install the latest version of CausalBench package on pip:
 `pip install causalbench-asu`
 
 ## Prerequisites
-CausalBench package requires several packages and registration to the CausalBench in order to run.
+CausalBench package runs on Python 3.10+ and requires several packages and registration to the CausalBench in order to run.
 ### Package Prerequisites:
 CausalBench requires several packages in order to execute, these packages are downloaded alongisde CausalBench:
 
@@ -19,7 +19,6 @@ CausalBench requires several packages in order to execute, these packages are do
 - `pip-system-certs`
 - `pyadl`
 - `gcastle`
-- `torch~=2.3.0`
 
 ### Configuration
 
