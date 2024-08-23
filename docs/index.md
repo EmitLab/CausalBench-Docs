@@ -1,6 +1,7 @@
 # Welcome to CausalBench Documentation
 
 This documentation serves as a guideline to CausalBench.
+As we are currently in beta, this documentation will be updated as the development progresses.
 
 ## [Installation](./install/)
 - Details how to install causalbench, and prerequisites.
