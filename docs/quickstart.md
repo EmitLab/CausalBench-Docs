@@ -1,5 +1,5 @@
 # How to Run CausalBench
-You can use the [python notebook](../files/CausalBench-Quickstart.ipynb) attached, or follow along this page to get CausalBench into action.
+You can use the [python notebook](files/CausalBench-Quickstart.ipynb) attached, or follow along this page to get CausalBench into action.
 
 ## Install CausalBench,
 Please follow the [installation guide](../install/) for installing CausalBench.
