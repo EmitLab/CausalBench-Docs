@@ -1,15 +1,34 @@
-# Papers
+## Conference appearances
 
-CausalBench is also an academic work, and every now and then, we push the boundaries of Collaborative Benchmarking with Causality, and lower the bar of entry into the domain. Through this endeavor, we write, publish, and present works. Below is an active list of our work:
+- **Causality Guided Representation Learning for Cross-Style Hate Speech Detection**  
+  **Authors:** Chengshuai Zhao, Shu Wan, Paras Sheth, Karan Patwa, K. Selçuk Candan, Huan Liu  
+  **Venue:** arXiv (cs.CL), 2025  
+  **Links:** [Paper](https://arxiv.org/abs/2510.07707) · [Dataset](https://huggingface.co/datasets/Shuwan/cadet-datasets) · [Code](https://github.com/Shu-Wan/cadet)
 
-## Conference Appearances
+- **Workshop on Benchmarking Causal Models (CausalBench)**  
+  **Organizers:** K. Selçuk Candan, Huan Liu, Ruocheng Guo, Paras Sheth, Ahmet Kapkiç, Pratanu Mandal  
+  **Venue:** Workshop at **WSDM ’26** (19th ACM International Conference on Web Search and Data Mining), 2026  
+  **Links:** [Workshop Link](https://wsdm26.causalbench.org)
 
-- **Incoming!** Join our workshop at WSDM'26, "Workshop on Benchmarking Causal Models (CausalBench)"! - [Workshop Link](https://wsdm26.causalbench.org)
-- **_Just Released!_** CIKM'25, "CausalBench-ER: Causally-Informed Explanations and Recommendations for Reproducible Benchmarking" (Resource Paper) - [Paper](https://dl.acm.org/doi/10.1145/3746252.3761606)
-- KDD'25, Hands-on Tutorial: "CausalBench: Causal Learning Research Streamlined". [Paper](files/papers/CausalBench_Tutorial.pdf), [Tutorial page](https://tutorial.causalbench.org)
-- CIKM'24, Best Demo-Paper Award: "Introducing CausalBench: A Flexible Benchmark Framework for Causal Analysis and Machine Learning". [Paper](https://arxiv.org/abs/2409.08419v2)
+- **CausalBench-ER: Causally-Informed Explanations and Recommendations for Reproducible Benchmarking** *(Resource Paper)*  
+  **Authors:** Ahmet Kapkiç, Pratanu Mandal, Abhinav Gorantla, Shu Wan, Ertugrul Çoban, Paras Sheth, Huan Liu, K. Selçuk Candan  
+  **Venue:** **CIKM ’25** (34th ACM International Conference on Information and Knowledge Management), 2025  
+  **Links:** [Paper](https://dl.acm.org/doi/10.1145/3746252.3761606)
 
-## Reports and Papers
+- **CausalBench: Causal Learning Research Streamlined** *(Hands-on Tutorial)*  
+  **Authors:** Ahmet Kapkiç, Pratanu Mandal, Abhinav Gorantla, Shu Wan, Ertuğrul Çoban, Paras Sheth, Huan Liu, K. Selçuk Candan  
+  **Venue:** **KDD ’25** (31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining), 2025  
+  **Links:** [Paper](files/papers/CausalBench_Tutorial.pdf) · [Tutorial page](https://tutorial.causalbench.org)
 
-<!-- - Causal Analysis and Recommender system. [Link](files/papers/CausalBench_Recommendation.pdf) -->
-- CausalBench: A Unifying Framework for Benchmarking Causal Learning Models. [Link](files/papers/CausalBench_Unifying.pdf)
+- **Introducing CausalBench: A Flexible Benchmark Framework for Causal Analysis and Machine Learning** *(Best Demo-Paper Award)*  
+  **Authors:** Ahmet Kapkiç, Pratanu Mandal, Shu Wan, Paras Sheth, Abhinav Gorantla, Yoonhyuk Choi, Huan Liu, K. Selçuk Candan  
+  **Venue:** **CIKM ’24** (33rd ACM International Conference on Information and Knowledge Management) — Demo Track, 2024  
+  **Links:** [Paper](https://arxiv.org/abs/2409.08419v2)
+
+## Reports and papers
+
+- **CausalBench: A Unifying Framework for Benchmarking Causal Learning Models**  
+  **Authors:** Ahmet Kapkiç, Pratanu Mandal, Abhinav Gorantla, Shu Wan, Ertuğrul Çoban, Paras Sheth, Huan Liu, K. Selçuk Candan  
+  **Venue:** Technical report (CausalBench)  
+  **Links:** [Link](files/papers/CausalBench_Unifying.pdf)
+`
