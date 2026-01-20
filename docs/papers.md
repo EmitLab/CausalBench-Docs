@@ -2,7 +2,7 @@
 
 - **Causality Guided Representation Learning for Cross-Style Hate Speech Detection**  
   **Authors:** Chengshuai Zhao, Shu Wan, Paras Sheth, Karan Patwa, K. Selçuk Candan, Huan Liu  
-  **Venue:** arXiv (cs.CL), 2025  
+  **Venue:** **The Web Conference ’26 (ACM Web Conference 2026)**
   **Links:** [Paper](https://arxiv.org/abs/2510.07707) · [Dataset](https://huggingface.co/datasets/Shuwan/cadet-datasets) · [Code](https://github.com/Shu-Wan/cadet)
 
 - **Workshop on Benchmarking Causal Models (CausalBench)**  
@@ -18,7 +18,7 @@
 - **CausalBench: Causal Learning Research Streamlined** *(Hands-on Tutorial)*  
   **Authors:** Ahmet Kapkiç, Pratanu Mandal, Abhinav Gorantla, Shu Wan, Ertuğrul Çoban, Paras Sheth, Huan Liu, K. Selçuk Candan  
   **Venue:** **KDD ’25** (31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining), 2025  
-  **Links:** [Paper](files/papers/CausalBench_Tutorial.pdf) · [Tutorial page](https://tutorial.causalbench.org)
+  **Links:** [Paper](https://dl.acm.org/doi/pdf/10.1145/3711896.3737598) · [Tutorial page](https://tutorial.causalbench.org)
 
 - **Introducing CausalBench: A Flexible Benchmark Framework for Causal Analysis and Machine Learning** *(Best Demo-Paper Award)*  
   **Authors:** Ahmet Kapkiç, Pratanu Mandal, Shu Wan, Paras Sheth, Abhinav Gorantla, Yoonhyuk Choi, Huan Liu, K. Selçuk Candan  
@@ -31,4 +31,3 @@
   **Authors:** Ahmet Kapkiç, Pratanu Mandal, Abhinav Gorantla, Shu Wan, Ertuğrul Çoban, Paras Sheth, Huan Liu, K. Selçuk Candan  
   **Venue:** Technical report (CausalBench)  
   **Links:** [Link](files/papers/CausalBench_Unifying.pdf)
-`
