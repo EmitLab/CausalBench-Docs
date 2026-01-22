@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Learn the Basics - CausalBench</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">CausalBench</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../install/" class="nav-link">Installation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../quickstart/" class="nav-link">Quickstart</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Learn the Basics</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../terms/" class="nav-link">Terms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../papers/" class="nav-link">Papers</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../quickstart/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../terms/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="true">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#causalbench-101" class="nav-link">CausalBench 101</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#dataset" class="nav-link">Dataset</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#model" class="nav-link">Model</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#metric" class="nav-link">Metric</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#context" class="nav-link">Context</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#task" class="nav-link">Task</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#benchmark" class="nav-link">Benchmark</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="causalbench-101">CausalBench 101</h1>
+<h2 id="dataset">Dataset</h2>
+<ul>
+<li><strong>Description</strong>: Data and configuration files that describe the data in the data files.</li>
+</ul>
+<h3 id="how-to-define-a-dataset">How to define a dataset</h3>
+<p>A dataset is defined with a yaml configuration, and the data files.
+Any dataset configuration must inlcude a type, name, task(?), files defined. Files need to be configured with <code>type</code>, <code>data</code> type, file path in <code>path</code>, and any columns with their details.<br />
+Optional fields are: <code>headers</code>, <code>version_num</code>, that defines the versions, <code>url</code>, <code>source</code> and <code>description</code> that define the dataset.</p>
+<pre><code class="language-yaml">type: dataset
+name: abalone
+source: UCI
+url: https://archive.ics.uci.edu/dataset/1/abalone
+description: Predict the age of abalone from physical measurements
+files:
+    file1:
+        type: csv
+        data: dataframe
+        path: abalone.mixed.numeric.csv
+        headers: true
+        columns:
+            sex:
+                header: Sex
+                type: nominal
+                data: integer
+                labels:
+                    - 0
+                    - 1
+                    - 2
+            ...
+    file2:
+        type: csv
+        data: graph
+        path: causal_info_adjmat.csv
+        headers: true
+        columns:
+            sex:
+                header: Sex
+                type: nominal
+                data: integer
+            ...
+</code></pre>
+<h2 id="model">Model</h2>
+<ul>
+<li><strong>Description</strong>: Algorithms written in Python that take in a dataset and execute a particular model.</li>
+<li><strong>Function</strong>: Produce outputs based on the tasks and models.</li>
+</ul>
+<h3 id="how-to-define-a-model">How to define a model</h3>
+<p>A model is defined with a yaml configuration, alongside a python script that the model is executed on. A model must have a type, name, task and its path defined.</p>
+<p>Optional fields are: <code>version_num</code>, that defines the versions, <code>url</code>, <code>source</code> and <code>description</code> that define the model.</p>
+<pre><code class="language-yaml">type: model
+name: VAR-LiNGAM
+source: GitHub
+url: https://github.com/huawei-noah/trustworthyAI/tree/master/gcastle
+description: Discovery of non-gaussian linear causal models
+task: discovery.temporal
+path: varlingam.py
+version_num: 1
+</code></pre>
+<h2 id="metric">Metric</h2>
+<ul>
+<li><strong>Description</strong>: Python implementations of metric calculations.</li>
+<li><strong>Function</strong>: Take in the outputs provided by the model and output a numerical value, based on its configuration.</li>
+</ul>
+<h3 id="how-to-define-a-metric">How to define a metric</h3>
+<pre><code class="language-yaml">type: metric
+name: accuracy_static
+source: NA
+url: NA
+description: Accuracy metric for static causal graph.
+task: discovery.static
+path: accuracy_static.py
+</code></pre>
+<h2 id="context">Context</h2>
+<ul>
+<li><strong>Description</strong>: A configuration that encapsulates a selected set of multiple datasets, models, metrics and hyperparameters.</li>
+<li><strong>Function</strong>: Defined by users, contexts represent experiments carried out on a selection of components. Contexts are defined on user level, and all of the dataset-model tuple combinations are created and executed on the system level.</li>
+</ul>
+<h3 id="how-to-define-a-context">How to define a context</h3>
+<p>A context is created with a yaml notation. Any context should have a type, name, task(?), and at least one dataset, model and metric defined.</p>
+<pre><code class="language-yaml">name: Context Abhinav 1
+task: discovery.static
+description: July experiment set
+datasets:
+- id: 14
+  version: 1
+- id: 15
+  version: 1
+models:
+- id: 22
+  version: 1
+- id: 17
+  version: 1
+metrics:
+- id: 12
+  version: 1
+- id: 12
+  version: 2
+</code></pre>
+<h2 id="task">Task</h2>
+<ul>
+<li><strong>Description</strong>: Logical definition of Causal/Machine Learning tasks.</li>
+<li><strong>Function</strong>: Handles configurations between dataset/model/metric components through python functions.</li>
+</ul>
+<h3 id="how-to-define-a-task">How to define a task</h3>
+<p>A task takes in two files: a <code>.yaml</code> file that defines the type, name, path and the class name of a task, and a <code>.py</code> file that defines the task and its execution.</p>
+<p>The yaml file should only include the <code>type</code>, <code>name</code>, <code>path</code>, and the <code>class</code> fields.</p>
+<pre><code class="language-yaml">type: task
+name: discovery.static
+path: discovery.static.py
+class_name: DiscoveryStatic
+</code></pre>
+<p>The python file should include any input and output functions for any dataset -&gt; model, model -&gt; metric, dataset -&gt; metric relations, and the helper functions to facilitate the task. discovery.static.py and discovery.temporal.py files under the <code>/task</code> folder provides examples on construction of these functions.</p>
+<h2 id="benchmark">Benchmark</h2>
+<ul>
+<li><strong>Description</strong>: Benchmark defines run results of a number of executed contexts. 
+On top of the executed context structure, benchmark includes run-configuration specific information like the system configuration, GPU-CPU resource profiling. </li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
